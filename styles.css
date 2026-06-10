@@ -1,0 +1,35 @@
+body{
+    width: 100vw;
+}
+
+.lotto-ticket{
+    display: flex;
+    margin: auto;
+    width: 500px;
+    border: 2px solid black;
+}
+
+.ticket-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-info h2, .ticket-info p{
+    text-align: center;
+}
+
+.lotto-squares{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    left: 33%;
+}
+
+.lotto-square{
+    background-color: bisque;
+    color: bisque;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
