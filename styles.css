@@ -1,21 +1,53 @@
+:root{
+    --background: #1a1a2e;
+    --ticket: #16213e;
+    --ticket-border: #e94560;
+    --unscratched-square: #c0a060;
+    --scratched-square: #0f3460;
+    --ticket-text: #ffd700;
+    --ticket-button: #e94560;
+    --general-text: #eaeaea;
+    --titles-font: "Bebas Neue", sans-serif;
+    --text-font: "Roboto", sans-serif;
+}
+
 body{
     width: 100vw;
+    background-color: var(--background);
+}
+
+.title, .your-wins{
+    text-align: center;
+    font-family: var(--titles-font);
+    color: var(--general-text);
 }
 
 .lotto-ticket{
     display: flex;
     margin: auto;
     width: 500px;
-    border: 2px solid black;
+    border: 7px solid var(--ticket-border);
+    background-color: var(--ticket);
 }
 
 .ticket-info{
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 
 .ticket-info h2, .ticket-info p{
     text-align: center;
+    color: var(--ticket-text);
+}
+
+.ticket-info h2{
+    font-family: var(--titles-font);
+    font-size: 2rem;
+}
+
+.ticket-info p{
+    font-family: var(--text-font);
 }
 
 .lotto-squares{
@@ -23,13 +55,40 @@ body{
     position: relative;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
-    left: 33%;
+    left: 0%;
 }
 
 .lotto-square{
-    background-color: bisque;
-    color: bisque;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--unscratched-square);
     width: 50px;
     height: 50px;
     margin: 5px;
+    z-index: 1000;
+}
+
+.lotto-random-item{
+    font-size: 2rem;
+    display: none;
+}
+
+.new-ticket{
+    display: block;
+    margin: 2.5% auto;
+    background-color: var(--ticket-button);
+    border: 2px solid var(--ticket-button);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--text-font);
+    color: var(--general-text);
+}
+
+.win-count{
+    color: var(--general-text);
+    font-family: var(--text-font);
+    text-align: center;
+    font-size: 2rem;
 }
