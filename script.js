@@ -60,8 +60,6 @@ const winnerChecker = (randomFruits) => {
     if(Object.values(count).some(fruit => fruit >= 3)){
         money += 3;
         winCount.textContent = `$${money}`;
-    } else {
-        winCount.textContent = `$${money}`;
     }
 }
 
@@ -83,7 +81,6 @@ newTicketBtn.addEventListener("click", () => {
 lottoSquares.forEach(square => {
     square.addEventListener("click", () => {
         showRandomItems();
-        console.log(randomItemHiddenChecker())
         if(randomItemHiddenChecker() === true){
             winnerChecker(randomFruits);
         } else {
